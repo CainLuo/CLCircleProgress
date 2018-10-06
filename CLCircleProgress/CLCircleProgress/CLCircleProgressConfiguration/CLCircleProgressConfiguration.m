@@ -10,26 +10,21 @@
 
 @implementation CLCircleProgressConfiguration
 
-- (instancetype)init {
+- (instancetype)initConfigDefaultProperty {
     
     self = [super init];
     
     if (self) {
         
+        _cl_progress        = 0;
+        _cl_endAngle        = -M_PI_2;
+        _cl_lineWidth       = 3;
+        _cl_startAngle      = -M_PI_2;
+        _cl_progressColor   = [UIColor greenColor];
+        _cl_backgroundColor = [UIColor grayColor];
     }
     
     return self;
 }
-
-- (void)es_configDefaultProperty {
-    
-    _cl_progress        = 0;
-    _cl_endAngle        = -M_PI_2;
-    _cl_lineWidth       = 3;
-    _cl_startAngle      = -M_PI_2;
-    _cl_progressColor   = [UIColor greenColor];
-    _cl_backgroundColor = [UIColor grayColor];
-}
-
 
 @end

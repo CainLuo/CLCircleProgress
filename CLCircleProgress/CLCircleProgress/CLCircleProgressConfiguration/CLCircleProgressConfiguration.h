@@ -14,6 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CLCircleProgressConfiguration : NSObject
 
 /**
+ 初始化默认的数据
+
+ @return CLCircleProgressConfiguration
+ */
+- (instancetype)initConfigDefaultProperty;
+
+/**
  默认: 3
  */
 @property (nonatomic, assign) CGFloat cl_lineWidth;
