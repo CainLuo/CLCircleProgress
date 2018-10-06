@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "CLCircleProgressLayer.h"
+#import "CLCircleProgressConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CLCircleProgressView : UIView
+
+@property (nonatomic, strong, readonly) CLCircleProgressLayer *cl_circleProgressLayer;
+
+- (instancetype)initCircleProgressViewWithConfiguration:(CLCircleProgressConfiguration *)configuration;
 
 @end
 
