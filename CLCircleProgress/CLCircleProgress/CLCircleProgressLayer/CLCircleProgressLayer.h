@@ -15,36 +15,27 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CLCircleProgressLayer : NSObject
 
 /**
- 默认: 3
+ 初始化CLCircleProgressLayer
+
+ @param configuration CLCircleProgressConfiguration
+ @return CLCircleProgressLayer
  */
-@property (nonatomic, assign) CGFloat cl_lineWidth;
+- (instancetype)initCircleProgressLayerWithConfiguration:(CLCircleProgressConfiguration *)configuration;
 
 /**
- 默认: -M_PI_2
- */
-@property (nonatomic, assign) CGFloat cl_startAngle;
+ 获取指定UIView进度圈的底图
 
-/**
- 默认: -M_PI_2
+ @param view UIView
+ @return CAShapeLayer
  */
-@property (nonatomic, assign) CGFloat cl_endAngle;
-
-/**
- 进度圈颜色, 默认: [UIColor greenColor]
- */
-@property (nonatomic, strong) UIColor *cl_progressColor;
-
-/**g
- 进度圈底部颜色, 默认: [UIColor grayColor]
- */
-@property (nonatomic, strong) UIColor *cl_backgroundColor;
-
-/**
- 进度, 最小为0, 最大为1
- */
-@property (nonatomic, assign) CGFloat cl_progress;
-
 - (CAShapeLayer *)cl_getBackShapeLayerWithView:(UIView *)view;
+
+/**
+ 获取指定UIViewd进度圈
+
+ @param view UIView
+ @return CAShapeLayer
+ */
 - (CAShapeLayer *)cl_getProgressShapeLayerWithView:(UIView *)view;
 
 @end
